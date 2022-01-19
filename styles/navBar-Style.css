@@ -8,6 +8,10 @@
   /* border: 1px solid; */
 }
 nav {
+  position: fixed;
+  width: 100vw;
+}
+nav {
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
@@ -25,8 +29,8 @@ nav {
 }
 
 #favicon {
-  width: 320px;
-  height: 120px;
+  width: 300px;
+  height: 100px;
   font-weight: light;
 }
 
@@ -77,4 +81,14 @@ a {
   .nav_item {
     margin-bottom: 1rem;
   }
+}
+#search {
+  margin: 10px;
+  border: 0;
+  border-bottom: 3px solid black;
+  width: 8rem;
+}
+
+nav:hover {
+  background-color: white;
 }
