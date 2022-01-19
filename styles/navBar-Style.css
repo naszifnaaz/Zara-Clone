@@ -1,12 +1,5 @@
 /* Style sheet for NavBar */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  /* border: 1px solid; */
-}
 nav {
   position: fixed;
   width: 100vw;
@@ -62,6 +55,8 @@ nav {
 .navLinks {
   text-decoration: none;
   color: black;
+  font-size: 1rem;
+  font-weight: normal;
 }
 @media only screen and (max-width: 700px) {
   #search_bar {
