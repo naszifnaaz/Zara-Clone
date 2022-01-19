@@ -1,0 +1,80 @@
+/* Style sheet for NavBar */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 1px solid; */
+}
+nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#nav-bar-left {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+#hamburger_icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px 20px;
+}
+
+#favicon {
+  width: 320px;
+  height: 120px;
+  font-weight: light;
+}
+
+#nav-bar-right {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.nav_item {
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+#last-nav {
+  margin-right: 6rem;
+}
+label,
+input {
+  display: block;
+  margin: -5px 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#search {
+  margin: 0 5px;
+  border: 0;
+  border-bottom: 3px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+@media only screen and (max-width: 1000px) {
+  #help {
+    display: none;
+  }
+  #search_bar {
+    display: none;
+  }
+  .nav_item {
+    margin-bottom: 1rem;
+  }
+}
