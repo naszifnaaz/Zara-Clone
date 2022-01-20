@@ -337,4 +337,7 @@ shoesData.map(function (elem) {
 
     div.append(image, title, price_div);
     document.querySelector("#container").append(div);
+
+    localStorage.setItem("shoesData",JSON.stringify(shoesData));
+
   });
