@@ -1,11 +1,11 @@
-<!-- WOMEN SALE -->
+<!-- WOMEN BLAZERS -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Men Overshirts</title>
+    <title>Women Jackets</title>
     <link rel="stylesheet" href="/styles/navBar-Style.css">
     <link rel="stylesheet" href="/styles/Product-Style.css">
   </head>
@@ -27,7 +27,7 @@
         </div>
         <div id="nav-items">
           <ul>
-            <li class="nav_item"><a class="navLinks" href="">LOGIN</a> </li>
+            <li class="nav_item"><a class="navLinks" href=""></a> </li>
             <li class="nav_item" id="help"><a class="navLinks" href="">HELP</a> </li>
             <li class="nav_item" id="last-nav"><a class="navLinks" href="">CART</a> </li>
           </ul>
@@ -39,13 +39,13 @@
 </html>
 
 <script>
-    var womensData = JSON.parse(localStorage.getItem("mensData"));
+    var womenData = JSON.parse(localStorage.getItem("womenData"));
 
-    var saleData = mensData.filter(function (elem){
-        return elem.sale == "40%" || elem.sale == "60%";
+    var blazersData = womenData.filter(function (elem){
+        return elem.itemCategory == "BLAZERS_COATS";
     })
 
-    saleData.map(function (elem) {
+    blazersData.map(function (elem) {
       var div = document.createElement("div");
       div.setAttribute("class","box");
   

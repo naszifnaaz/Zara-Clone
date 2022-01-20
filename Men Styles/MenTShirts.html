@@ -1,11 +1,12 @@
-<!-- MEN OVERSHIRTS -->
+<!-- MEN TSHIRTS -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Men Overshirts</title>
+    <title>Men Shirts</title>
     <link rel="stylesheet" href="/styles/navBar-Style.css">
     <link rel="stylesheet" href="/styles/Product-Style.css">
   </head>
@@ -27,7 +28,7 @@
         </div>
         <div id="nav-items">
           <ul>
-            <li class="nav_item"><a class="navLinks" href="">LOGIN</a> </li>
+            <li class="nav_item"><a class="navLinks" href=""></a> </li>
             <li class="nav_item" id="help"><a class="navLinks" href="">HELP</a> </li>
             <li class="nav_item" id="last-nav"><a class="navLinks" href="">CART</a> </li>
           </ul>
@@ -41,11 +42,11 @@
 <script>
     var mensData = JSON.parse(localStorage.getItem("mensData"));
 
-    var overshirtsData = mensData.filter(function (elem){
-        return elem.itemCategory == "Overshirt";
+    var TshirtsData = mensData.filter(function (elem){
+        return elem.itemCategory == "T-Shirt";
     })
 
-    overshirtsData.map(function (elem) {
+    TshirtsData.map(function (elem) {
       var div = document.createElement("div");
       div.setAttribute("class","box");
   

@@ -1,4 +1,4 @@
-<!-- WOMEN JACKETS -->
+<!-- WOMEN T-SHIRTS -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +27,7 @@
         </div>
         <div id="nav-items">
           <ul>
-            <li class="nav_item"><a class="navLinks" href="">LOGIN</a> </li>
+            <li class="nav_item"><a class="navLinks" href=""></a> </li>
             <li class="nav_item" id="help"><a class="navLinks" href="">HELP</a> </li>
             <li class="nav_item" id="last-nav"><a class="navLinks" href="">CART</a> </li>
           </ul>
@@ -41,11 +41,11 @@
 <script>
     var womenData = JSON.parse(localStorage.getItem("womenData"));
 
-    var jacketsData = womenData.filter(function (elem){
-        return elem.itemCategory == "JACKETS_PUFFERS";
+    var tshirtsData = womenData.filter(function (elem){
+        return elem.itemCategory == "T-SHIRTS";
     })
 
-    jacketsData.map(function (elem) {
+    tshirtsData.map(function (elem) {
       var div = document.createElement("div");
       div.setAttribute("class","box");
   

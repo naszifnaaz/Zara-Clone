@@ -1,4 +1,4 @@
-<!-- MEN  TROUSERS -->
+<!-- MEN SHIRTS -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
         </div>
         <div id="nav-items">
           <ul>
-            <li class="nav_item"><a class="navLinks" href="">LOGIN</a> </li>
+            <li class="nav_item"><a class="navLinks" href=""></a> </li>
             <li class="nav_item" id="help"><a class="navLinks" href="">HELP</a> </li>
             <li class="nav_item" id="last-nav"><a class="navLinks" href="">CART</a> </li>
           </ul>
@@ -42,11 +42,11 @@
 <script>
     var mensData = JSON.parse(localStorage.getItem("mensData"));
 
-    var trousersData = mensData.filter(function (elem){
-        return elem.itemCategory == "Trousers";
+    var shirtsData = mensData.filter(function (elem){
+        return elem.itemCategory == "Shirt";
     })
 
-    trousersData.map(function (elem) {
+    shirtsData.map(function (elem) {
       var div = document.createElement("div");
       div.setAttribute("class","box");
   
