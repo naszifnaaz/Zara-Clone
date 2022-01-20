@@ -7,14 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/navBar-Style.css">
     <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         nav{
             position: relative;
-            margin: 0;
+            margin-top: 20px;
             padding: 0;
         }
-        body {
+        #paymentContainer {
             width: 70%;
-            /* margin: auto; */
+            margin: auto;
         }
         #box2 > div{ 
             width: 60px;
@@ -29,7 +32,7 @@
              
         }
         img {
-            width: 30px;
+            width: 50px;
         }
         #about{
             display: flex;
@@ -84,7 +87,8 @@
         }
         h4{
             text-align: center;
-            font-size: 7px;
+            font-size: 0.8rem;
+            font-weight: normal;
         }
         #box1{
             margin-top: 150px;
@@ -95,9 +99,9 @@
 <body>
     <nav>
         <div id="nav-bar-left">
-          <div id="hamburger">
-            <img src="https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg" alt="hamburger" id="hamburger_icon">
-          </div>
+            <div id="hamburger">
+                <a href="/navMenu.html"><img src="https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg" alt="hamburger" id="hamburger_icon"></a>
+              </div>
           <div id="logo">
               <img src="https://www.freepnglogos.com/uploads/zara-logo-png/zara-avrupa-logos-2020-desing--11.png" alt="favicon" id="favicon">
           </div>
@@ -110,14 +114,14 @@
           </div>
           <div id="nav-items">
             <ul>
-              <li class="nav_item"><a class="navLinks" href="">LOGIN</a> </li>
-              <li class="nav_item" id="help"><a class="navLinks" href="">HELP</a> </li>
-              <li class="nav_item" id="last-nav"><a class="navLinks" href="">CART</a> </li>
+              <li class="nav_item"><a class="navLinks" href="../login.html">LOGIN</a> </li>
+              <li class="nav_item" id="help"><a class="navLinks" href="help.html">HELP</a> </li>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href="../shopCart.html">CART</a> </li>
             </ul>
           </div>
         </div>
       </nav>
-    <div>
+    <div id="paymentContainer">
         <div id="box1">
             <h1>HELP</h1>
         </div>

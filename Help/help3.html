@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/navBar-Style.css">
     <style>
+         nav{
+            position: relative;
+            margin-left:-200px;
+        }
         body {
             width: 70%;
             margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
         }
-
-        li {
-            font-size: 8px;
-            font-weight: 550;
+        li{
+            font-size: 0.8rem;
             margin-top: 5px;
         }
-
-        ul {
+        ul{
             list-style: none;
         }
-
-        #about {
+        #about{
             margin-top: 170px;
             margin-left: 40px;
         }
-
-        .head {
+        .head{
             font-weight: bold;
             font-size: 12px;
         }
-
-        #copy {
+        #copy{
             display: flex;
             width: 90%;
             margin: auto;
@@ -40,104 +39,120 @@
             justify-content: space-between;
             text-align: right;
         }
-
-        #last {
+        #last{
             margin-top: -10px;
         }
-
-        p {
-            font-family: monospace;  
-            text-align: center;
-        }
-
-        #bottom {
+        #bottom{
             width: 90%;
             margin: auto;
             margin-top: 60px;
             margin-bottom: 70px;
             font-size: 12px;
         }
-
         img {
-            width: 100%; 
+            width: 50px;
         }
-
         #par1 {
-            display: flex;
+            display: flex ;   
+        } 
+        #box2{
+            display:flex;
+            flex-flow: wrap;
+            margin-bottom: 200px;
         }
-
-        #box2 {
-            display: flex;
-            flex-flow: wrap; 
-            margin-bottom: 200px; 
+        #box2 >div{
+            width: 100px;
+            margin: 20px;  
         }
-        #box2>div {
-            width: 120px;
-            margin: 15px;
-        }
-        .nu1{
-            margin: auto;
-            width: 30%;
-        }
-
-        h1 {
-            font-family: monospace;
-            font-weight: bold;
-        }
-
         a {
             color: black;
             font-family: monospace;
             text-decoration: underline;
         }
+        h1 {
+            font-family: monospace;
+            font-weight: bold;
+        }
+        .nu1{
+            margin: auto;
+            width: 30%;
+        }
         #box1{
             margin-top: 150px;
         }
+        p { 
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        h1 {
+            font-family: monospace;
+            font-weight: lighter;
+        }
+
     </style>
 </head>
-
 <body>
+    <nav>
+        <div id="nav-bar-left">
+          <div id="hamburger">
+            <a href="/navMenu.html"><img src="https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg" alt="hamburger" id="hamburger_icon"></a>
+          </div>
+          <div id="logo">
+              <img src="https://www.freepnglogos.com/uploads/zara-logo-png/zara-avrupa-logos-2020-desing--11.png" alt="favicon" id="favicon">
+          </div>
+          </div>
+        </div>
+        <div id="nav-bar-right">
+          <div id="search_bar">
+              <label class="navLabel" for="search">SEARCH</label>
+              <p id="search"></p>
+          </div>
+          <div id="nav-items">
+            <ul>
+              <li class="nav_item"><a class="navLinks" href="">LOGIN</a> </li>
+              <li class="nav_item" id="help"><a class="navLinks" href="/Help/help.html">HELP</a> </li>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href="">CART</a> </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div>
         <div id="box1">
-            <h1> CLOTHES COLLECTION PROGRAMME </h1>
+            <h1>PAYMENT</h1>
         </div>
         <div>
-            <a href="help.html" >HELP</a>
+            <a href="help.html">HELP</a>
         </div>
         <div id="box2">
             <div>
                 <div class="nu1">
-                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-clothes-collection-info.svg?ts=1614071652367" />  
+                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-payment-methods.svg?ts=1550654368093" />
                 </div>
-                <p> GENERAL INFORMATION  </p>
+                <p>PAYMENT METHODS </p>
             </div>
             <div>
                 <div class="nu1">
-                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-clothes-collection-store.svg?ts=1610972629444" />  
+                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-payment-process.svg?ts=1550654368093" />
                 </div>
-                <p> STORE DELIVERY </p>
+                <p>TIME OF PAYMENT</p>
             </div>
             <div>
                 <div class="nu1">
-                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-clothes-collection-packaging.svg?ts=1610975243566" />  
+                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-payment-safe.svg?ts=1550654368093" />
                 </div>
-                    <p> PACKAGING CONDITIONS  </p>
+                    <p> SECURE PURCHASING</p>
             </div>
             <div>
                 <div class="nu1">
-                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-clothes-collection-articles.svg?ts=1610975476292" />  
+                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-invoice.svg?ts=1550654368093" />
                 </div>
-                    <p> DONATING ITEMS </p>
+                    <p> INVOICE </p>
             </div>
-            <div>
-                <div class="nu1">
-                    <img  src="https://static.zara.net/photos///mkt/misc/help/icons//icon-80-help-clothes-collection-faq.svg?ts=1610975697534" />  
-                </div>
-                    <p> FREQUENTLY ASKED QUESTIONS </p>
-            </div>
+            
         </div>
-
-        <div id="par1">
+        <br>
+        <br>
+        <div id="par1">    
             <div>
                 <ul>
                     <li class="head">HELP</li>
@@ -151,7 +166,7 @@
                     <li>MY ACCOUNT</li>
                 </ul>
             </div>
-
+    
             <div>
                 <ul>
                     <li class="head">FOLLOW US</li>
@@ -164,7 +179,7 @@
                     <li>YOUTUBE</li>
                 </ul>
             </div>
-
+    
             <div>
                 <ul>
                     <li class="head">COMPANY</li>
@@ -174,7 +189,7 @@
                     <li>WORK WITH US</li>
                 </ul>
             </div>
-
+    
             <div>
                 <ul>
                     <li class="head">POLICES</li>
@@ -187,7 +202,7 @@
         <br>
         <hr style="width: 100%;">
         <br>
-
+    
         <div id="copy">
             <h6>INDIA</h6>
             <div>
@@ -195,7 +210,7 @@
                 <p id="last">© ALL RIGHTS RESERVED</p>
             </div>
         </div>
-
+    
         <div id="bottom">
             <h6>NAME AND ADDRESS OF THE MANUFACTURER:</h6>
             <h6>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</h6>
@@ -203,5 +218,4 @@
         </div>
     </div>
 </body>
-
 </html>
