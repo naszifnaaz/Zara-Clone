@@ -1457,6 +1457,15 @@ womenData.map(function (elem) {
     image.setAttribute("src", elem.imageURL);
     image.setAttribute("class", "productImage");
 
+    //linking product page
+
+    image.addEventListener("click",function(){
+        
+        localStorage.setItem("productpage",JSON.stringify(elem));     
+                
+        window.location.href = "../pilotpage.html";
+    })
+
     var title = document.createElement("p");
     title.textContent = elem.productName;
     title.setAttribute("class","productTitle");

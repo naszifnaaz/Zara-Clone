@@ -136,21 +136,10 @@
 </html>
 <script>
 
-    // var cartarr=JSON.parse(localStorage.getItem("cartdata"))||[];
-    // console.log(cartarr)
-    var ele=[{
-        imageURL : "https://static.zara.net/photos///2021/I/0/3/p/2224/765/611/2/w/386/2224765611_6_1_1.jpg?ts=1636551456838",
-        productName : "LOGO HOODIE",
-        price : "₹ 1,190.00",
-        strikedPrice : "₹ 1,490.00",
-        itemGender : "mens",
-        itemCategory :"SWEATSHIRTS | JACKETS",
-        sale : "",
-        age :"6-14 Years"
-      }]
-      creattable(ele);
+    
+    var ele=JSON.parse(localStorage.getItem("productpage"))
 
-
+    creattable(ele);
     function creattable(ele)
     {
 
@@ -159,7 +148,7 @@
         var img1=document.createElement("img");
 
         ///set img url 
-        img1.setAttribute("src",ele[0].imageURL);
+        img1.setAttribute("src",ele.imageURL);
 
         //middle box appending completed
         td1.append(img1);
@@ -168,13 +157,13 @@
         var td2=document.createElement("div");
         var head1=document.createElement("h1");
         //element name
-        head1.textContent=ele[0].productName;
+        head1.textContent=ele.productName;
         //console.log(head1);
         //set striked out price and normal price
         var smrp=document.createElement("span");
-        smrp.textContent=ele[0].strikedPrice;
+        smrp.textContent=ele.strikedPrice;
         var pmrp=document.createElement("span");
-        pmrp.textContent=ele[0].price;
+        pmrp.textContent=ele.price;
         //
         var p4=document.createElement("p");
         p4.textContent="MRP incl. of all taxes";

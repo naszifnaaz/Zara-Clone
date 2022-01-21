@@ -659,7 +659,8 @@ var menData = [
   
   
   //Rendering Mens Data
-  menData.map(function (elem) {
+  menData.map(function (elem) {    
+    
       var div = document.createElement("div");
       div.setAttribute("class","box");
   
@@ -667,7 +668,12 @@ var menData = [
       image.setAttribute("src", elem.imageURL);
       image.setAttribute("class", "productImage");
 
-      image.addEventListener("click",function(elem){
+      //linking product page
+
+      image.addEventListener("click",function(){
+        
+        localStorage.setItem("productpage",JSON.stringify(elem));     
+                
         window.location.href = "../pilotpage.html";
       })
   
