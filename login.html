@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZARA LOGIN</title>
     <link rel="stylesheet" href="styles/navBar-Style.css">
     <style>
         *{
@@ -278,6 +278,10 @@
             if(regUsers[i].Email == email && regUsers[i].Password == password)
             {
                 alert("LOGIN SUCCESSFUL");
+                var customer=[];
+                cobj={"Email":regUsers[i].Email,"Password":regUsers[i].Password,"username":regUsers[i].username,"Pincode":regUsers[i].Pincode,"Address":regUsers[i].Address,"Addaddress":regUsers[i].Addaddress,"Locality":regUsers[i].Locality,"State":regUsers[i].State, "Prefix":regUsers[i].Prefix, "Mobile":regUsers[i].Mobile}
+                customer.push(cobj);
+                localStorage.setItem("KYC",JSON.stringify(customer))
                 window.location.href = "home.html";
 
             }
