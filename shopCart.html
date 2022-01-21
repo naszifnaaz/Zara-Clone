@@ -9,6 +9,7 @@
     <style>
       nav{
         position: relative;
+        width: 100vw;
       }
       body{
         font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +31,6 @@
       #numOfCart{
         text-align: right;
         font-size: 0.8rem;
-        font-weight: bold;
         margin-bottom: 2rem;
       }
       .products_num{
@@ -113,7 +113,10 @@
 
     <div class="checkout">
       <div id="#total_price"></div>
-        <div id="payBOX"> FINISH PAYMENT</div>
+      <a href="success.html">
+        <div id="payBOX" onclick="paymentSuccess"> FINISH PAYMENT</div>
+      </a>
+        
     </div>
   </body>
 </html>
@@ -146,6 +149,10 @@
   var userDetails = document.createElement("div");
   userDetails.setAttribute("class","userDetails");
 
+  var user_details = document.createElement("p");
+  user_details.setAttribute("class","delivery");
+  user_details.textContent = "SHIPPING DETAILS";
+
   var user_name = document.createElement("p");
   user_name.setAttribute("class","user");
   user_name.textContent = currentUser[0].username;
@@ -154,6 +161,9 @@
   address.setAttribute("class","user");
   address.textContent = currentUser[0].Address;
 
+  var address_2 = document.createElement("p");
+  address_2.setAttribute("class","user");
+  address_2.textContent = currentUser[0].Addaddress;
 
   var pin = document.createElement("p");
   pin.setAttribute("class","user");
@@ -163,9 +173,28 @@
   locality.setAttribute("class","user");
   locality.textContent = currentUser[0].Locality;
 
-  userDetails.append(user_name,address,pin,locality);
+  var state = document.createElement("p");
+  state.setAttribute("class","user");
+  state.textContent = currentUser[0].State;
 
-  box_1.append(delivery_title,delivey_details,delivery_desc,userDetails);
+  var phone = document.createElement("p");
+  phone.setAttribute("class","user");
+  phone.textContent = currentUser[0].Mobile;
+
+  var email = document.createElement("p");
+  email.setAttribute("class","user");
+  email.textContent = currentUser[0].Email;
+
+  var payment_method = document.createElement("p");
+  payment_method.setAttribute("class","delivery");
+  payment_method.textContent = "PAYMENT METHOD";
+
+  var payment_image = document.createElement("img");
+  payment_image.setAttribute("src","https://static.zara.net/static/images/payment/payment/upi.svg");
+
+  userDetails.append(user_details,user_name,address,address_2,pin,locality,state,phone,email);
+
+  box_1.append(delivery_title,delivey_details,delivery_desc,userDetails,payment_method,payment_image);
 
  
   //CART INFO
@@ -239,4 +268,5 @@
     // console.log(total);
     var total_field = document.getElementById("#total_price").textContent = `₹ ${total}.00`;
     console.log(total_field);
+
 </script>
