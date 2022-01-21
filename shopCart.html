@@ -112,21 +112,19 @@
     </div>
 
     <div class="checkout">
-      <div id="#total-price"> TOTAL ₹ 3,980.00 </div>
-        <div id="payBOX"> CONTINUE</div>
+      <div id="#total_price"></div>
+        <div id="payBOX"> FINISH PAYMENT</div>
     </div>
   </body>
 </html>
 
 <script>
 
-  // var currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  var currentUser = {
-    username : "Muhammed Nasif",
-    Address : "Naaz Villa House",
-    pin : 670593,
-    locality : "Kannur"
-  }
+   var currentUser = JSON.parse(localStorage.getItem("KYC"));
+   console.log(currentUser);
+  
+
+  //Converting Prices to Number
 
   
   var box_1 = document.createElement("div");
@@ -150,23 +148,20 @@
 
   var user_name = document.createElement("p");
   user_name.setAttribute("class","user");
-  user_name.textContent = currentUser.username;
+  user_name.textContent = currentUser[0].username;
 
   var address = document.createElement("p");
   address.setAttribute("class","user");
-  address.textContent = currentUser.Address;
+  address.textContent = currentUser[0].Address;
 
-  var address = document.createElement("p");
-  address.setAttribute("class","user");
-  address.textContent = currentUser.Address;
 
   var pin = document.createElement("p");
   pin.setAttribute("class","user");
-  pin.textContent = currentUser.pin;
+  pin.textContent = currentUser[0].Pincode;
 
   var locality = document.createElement("p");
   locality.setAttribute("class","user");
-  locality.textContent = currentUser.locality;
+  locality.textContent = currentUser[0].Locality;
 
   userDetails.append(user_name,address,pin,locality);
 
@@ -176,29 +171,8 @@
   //CART INFO
   var box_2 = document.createElement("div");
 
-  // var cartItems = JSON.parse(localStorage.getItem("")) || [];
-  var cartItems = [
-  {
-      imageURL : "https://static.zara.net/photos///2021/I/0/3/p/2224/765/611/302/w/386/2224765611_1_1_1.jpg?ts=1636644918774",
-      productName : "LOGO HOODIE",
-      price : "₹ 1,190.00",
-      strikedPrice : "₹ 1,490.00",
-      itemGender : "mens",
-      itemCategory :"SWEATSHIRTS | JACKETS",
-      sale : "",
-      age :"6-14 Years"
-    },
-    {
-      imageURL : "https://static.zara.net/photos///2021/I/0/3/p/2224/765/611/2/w/386/2224765611_6_1_1.jpg?ts=1636551456838",
-      productName : "LOGO HOODIE",
-      price : "₹ 1,190.00",
-      strikedPrice : "₹ 1,490.00",
-      itemGender : "mens",
-      itemCategory :"SWEATSHIRTS | JACKETS",
-      sale : "",
-      age :"6-14 Years"
-    },
-  ]
+   var cartItems = JSON.parse(localStorage.getItem("cartdata")) || [];
+  
 
   //DOM
   var box_2_1 = document.createElement("div");
@@ -231,4 +205,38 @@
   box_2.append(delivery_2,numOfCartItems,product_images);
 
   document.querySelector("#container").append(box_1,box_2);
+
+  var prices = [];
+    cartItems.map(function(elem){
+        var price = elem.price;
+        var bag = "";
+        for(var i=0; i<price.length; i++)
+        {
+            if(price[i] == "₹" || price[i]==",")
+            {
+                continue;
+            }
+            else if(price[i] == ".")
+            {
+                break;
+            }
+            else{
+                bag = bag+price[i];
+            }
+        }
+        prices.push(bag);
+    });
+
+    var prices = prices.map(Number);
+    
+    var total = 0;
+
+    for(var j=0; j<prices.length; j++)
+    {
+        total = total+prices[j];
+    }
+
+    // console.log(total);
+    var total_field = document.getElementById("#total_price").textContent = `₹ ${total}.00`;
+    console.log(total_field);
 </script>
