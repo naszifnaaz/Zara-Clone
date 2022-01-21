@@ -686,4 +686,6 @@ var menData = [
   
       div.append(image, title, price_div);
       document.querySelector("#container").append(div);
+
+      localStorage.setItem("mensData",JSON.stringify(menData));
     });

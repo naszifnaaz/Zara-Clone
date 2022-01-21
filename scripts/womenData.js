@@ -1476,4 +1476,6 @@ womenData.map(function (elem) {
 
     div.append(image, title, price_div);
     document.querySelector("#container").append(div);
+
+    localStorage.setItem("womenData",JSON.stringify(womenData));
   });
