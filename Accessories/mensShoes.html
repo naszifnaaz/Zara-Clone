@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Men Knitwear</title>
+    <title>Men Shoes</title>
     <link rel="stylesheet" href="/styles/navBar-Style.css">
     <link rel="stylesheet" href="/styles/Product-Style.css">
   </head>
@@ -53,6 +53,14 @@
       var image = document.createElement("img");
       image.setAttribute("src", elem.imageURL);
       image.setAttribute("class", "productImage");
+      //linking product page
+
+      image.addEventListener("click",function(){
+        
+        localStorage.setItem("productpage",JSON.stringify(elem));     
+                
+        window.location.href = "../pilotpage.html";
+      })
   
       var title = document.createElement("p");
       title.textContent = elem.productName;

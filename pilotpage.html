@@ -181,6 +181,7 @@
 </html>
 <script>
   var ele = JSON.parse(localStorage.getItem("productpage"));
+  var cartarr=JSON.parse(localStorage.getItem("cartdata"))||[];
 
   creattable(ele);
   function creattable(ele) {
@@ -238,7 +239,8 @@
     btn.textContent = "Add To Cart";
     btn.addEventListener("click", function () {
       cartarr.push(ele);
-      localStorage.setItem("cartdata", cartarr);
+      localStorage.setItem("cartdata", JSON.stringify(cartarr));
+      alert("added to cart");
     });
 
     //appending to rigthmost table

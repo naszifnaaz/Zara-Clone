@@ -229,7 +229,16 @@
 
                 let img = document.createElement("img");
                 img.src = bags.imageURL;
+                //linking product page
 
+                img.addEventListener("click",function(){
+                  
+                  localStorage.setItem("productpage",JSON.stringify(bags));     
+                          
+                  window.location.href = "../pilotpage.html";
+                })
+
+                
                 let title = document.createElement("h1");
                 title.textContent = bags.productName;
 
