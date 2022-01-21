@@ -666,6 +666,10 @@ var menData = [
       var image = document.createElement("img");
       image.setAttribute("src", elem.imageURL);
       image.setAttribute("class", "productImage");
+
+      image.addEventListener("click",function(elem){
+        window.location.href = "../pilotpage.html";
+      })
   
       var title = document.createElement("p");
       title.textContent = elem.productName;
