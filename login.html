@@ -263,7 +263,10 @@
 </html>
 
 <script>
+    
     var regUsers=JSON.parse(localStorage.getItem("USERSDATA"));
+    var cartData = [];
+    localStorage.setItem("cartdata",JSON.stringify(cartData));
 
     document.querySelector("form").addEventListener("submit",loginaccount);
 

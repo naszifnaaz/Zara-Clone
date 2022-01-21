@@ -10,6 +10,10 @@
   <style>
       nav{
           position: relative;
+          width: 90%;
+      }
+      #nav-bar-right{
+        justify-content: flex-end;
       }
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -18,6 +22,7 @@
       padding-top: 6%;
       height: 900px;
       padding-bottom: 10%;
+      margin-top: -4.7rem;
     }
 
     #leftbox {
@@ -90,6 +95,21 @@
       padding: 5%;
       font-size: medium;
     }
+    .striked{
+      text-decoration: line-through;
+      color: black;
+    }
+    .realprice{
+      padding: 5px;
+      width: 4rem;
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+    }
+    .head{
+      font-size: 1rem;
+      font-weight: normal;
+    }
   </style>
 
   <body>
@@ -112,6 +132,7 @@
               <li class="nav_item"><a class="navLinks" href=""></a> </li>
               <li class="nav_item" id="help"><a class="navLinks" href="/Help/help.html">HELP</a> </li>
               <li class="nav_item" id="last-nav"><a class="navLinks" href="/cart.html">CART</a> </li>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href="/login.html">SIGN OUT</a> </li>
             </ul>
           </div>
         </div>
@@ -119,10 +140,10 @@
     <div id="container">
       <div id="leftbox">
         <div>
-          <h2>MATERIALS, CARE AND ORIGIN</h2>
+          <h2 class="head">MATERIALS, CARE AND ORIGIN</h2>
         </div>
         <div>
-          <h2>MATERIALS</h2>
+          <h2 class="head">MATERIALS</h2>
           <div>
             <p>
               We work with monitoring programmes to ensure compliance with
@@ -149,7 +170,7 @@
           </div>
         </div>
         <div>
-          <h2>CARE</h2>
+          <h2 class="head">CARE</h2>
           <div>
             <p>Caring for your clothes is caring for the environment.</p>
 
@@ -160,7 +181,7 @@
               technologies that are respectful of the environment.
             </p>
           </div>
-          <h2>ORIGIN</h2>
+          <h2 class="head">ORIGIN</h2>
           <div>
             <p>
               We work alongside our suppliers, workers, unions and international
@@ -206,12 +227,17 @@
     //set striked out price and normal price
     var smrp = document.createElement("span");
     smrp.textContent = ele.strikedPrice;
+    smrp.setAttribute("class","striked");
+
     var pmrp = document.createElement("span");
     pmrp.textContent = ele.price;
+    pmrp.setAttribute("class","realprice");
     //
     var p4 = document.createElement("p");
     p4.textContent = "MRP incl. of all taxes";
+    p4.style.marginBottom = 0;
     var p5 = document.createElement("p");
+    p5.style.marginBottom = 0;
     p5.textContent = "Colour Natural | 0706/331";
     //SELECT OPTION CREATION
     var select1 = document.createElement("select");

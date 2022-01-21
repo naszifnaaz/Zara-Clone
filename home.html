@@ -138,9 +138,10 @@
           </div>
           <div id="nav-items">
             <ul>
-              <li class="nav_item"><a class="navLinks" href="/login.html">LOGIN</a> </li>
+              <li class="nav_item"><a class="navLinks" href="" id="current_user"></a> </li>
               <li class="nav_item" id="help"><a class="navLinks" href="/Help/help.html">HELP</a> </li>
-              <li class="nav_item" id="last-nav"><a class="navLinks" href="/cart.html">CART</a> </li>
+              <li class="nav_item"><a class="navLinks" href="/cart.html">CART</a> </li>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href="/login.html">SIGN OUT</a> </li>
             </ul>
           </div>
         </div>
@@ -257,6 +258,12 @@
 </html>
 
 <script>
+    //Current User
+    var currentUser = JSON.parse(localStorage.getItem("KYC"));
+    
+    document.querySelector("#current_user").textContent = currentUser[0].username;
+    document.querySelector("#current_user").style.textTransform = "uppercase";
+
     var image = document.querySelector("#images");
     var photos = ["https://media.gettyimages.com/photos/karin-teigl-wearing-bottega-veneta-heels-arket-jeans-short-dior-belt-picture-id1244610537?k=20&m=1244610537&s=612x612&w=0&h=VLsxLsiA-9k1-bjuS9bEDy4SY_CdLXVic0bF6LNBQ6k=",
                   "https://media.gettyimages.com/photos/spanish-multinational-clothing-design-retail-company-by-inditex-zara-picture-id1228964544?k=20&m=1228964544&s=612x612&w=0&h=jBjjGilqesapnnlRRK3dpWigRioEcogmKib28hWX2QU=",
