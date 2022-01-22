@@ -208,51 +208,66 @@
 <script>
 
     var product = JSON.parse(localStorage.getItem("cartdata")) || [];
+    displayData(product);
 
-    console.log(product);
+    function deleteTask(index)
+    {
+        document.querySelector("#cartContainer").innerHTML = "";
 
-    product.map(function(elem,index){
-        var div = document.createElement("div");
-        div.setAttribute("id","boxes")
+
+        product.splice(index,1);
         
-        
-        var div2 = document.createElement("div");
-        div2.setAttribute("id","item");
-        
-        var image = document.createElement("img");
-        image.setAttribute("src",elem.imageURL);
-        image.setAttribute("id","avatar");
+        localStorage.setItem("cartdata",JSON.stringify(product));
+        displayData(product);
+    }
 
-        var div3 = document.createElement("div");
+    function displayData(product)
+    {
+        product.map(function(elem,index){
+            var div = document.createElement("div");
+            div.setAttribute("id","boxes")
+            
+            
+            var div2 = document.createElement("div");
+            div2.setAttribute("id","item");
+            
+            var image = document.createElement("img");
+            image.setAttribute("src",elem.imageURL);
+            image.setAttribute("id","avatar");
+    
+            var div3 = document.createElement("div");
+    
+            var ref = document.createElement("p");
+            ref.textContent = "REF. | 4065/412";
+            ref.setAttribute("id","ref");
+    
+            var name = document.createElement("p");
+            name.textContent = elem.productName;
+            name.setAttribute("id","productName");
+    
+    
+            var price = document.createElement("p");
+            price.textContent = elem.price;
+            price.setAttribute("id","cost");
+    
+    
+            var del = document.createElement("p");
+            del.textContent = "DELETE";
+            del.setAttribute("id","del");
+            del.addEventListener("click",function(){
+                deleteTask(index);
+            })
+    
+            div3.append(ref,name,price,del);
+    
+            div2.append(image,div3);
+    
+            div.append(div2);
+    
+            document.querySelector("#cartContainer").append(div);
+        });
 
-        var ref = document.createElement("p");
-        ref.textContent = "REF. | 4065/412";
-        ref.setAttribute("id","ref");
-
-        var name = document.createElement("p");
-        name.textContent = elem.productName;
-        name.setAttribute("id","productName");
-
-
-        var price = document.createElement("p");
-        price.textContent = elem.price;
-        price.setAttribute("id","cost");
-
-
-        var del = document.createElement("p");
-        del.textContent = "DELETE";
-        del.setAttribute("id","del");
-
-        div3.append(ref,name,price,del);
-
-        div2.append(image,div3);
-
-        div.append(div2);
-
-        document.querySelector("#cartContainer").append(div);
-    });
-
-    var prices = [];
+        var prices = [];
     product.map(function(elem){
         var price = elem.price;
         var bag = "";
@@ -285,5 +300,6 @@
     // console.log(total);
 
     document.querySelector("#total-amount").textContent = `₹ ${total}.00`;
+    }
 
 </script>
