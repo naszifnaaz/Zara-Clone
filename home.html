@@ -258,11 +258,7 @@
 </html>
 
 <script>
-    //Current User
-    var currentUser = JSON.parse(localStorage.getItem("KYC"));
-    
-    document.querySelector("#current_user").textContent = currentUser[0].username;
-    document.querySelector("#current_user").style.textTransform = "uppercase";
+   
 
     var image = document.querySelector("#images");
     var photos = ["https://media.gettyimages.com/photos/karin-teigl-wearing-bottega-veneta-heels-arket-jeans-short-dior-belt-picture-id1244610537?k=20&m=1244610537&s=612x612&w=0&h=VLsxLsiA-9k1-bjuS9bEDy4SY_CdLXVic0bF6LNBQ6k=",
@@ -296,4 +292,10 @@
         var img = Math.floor(Math.random() *25);
         image.src = photos[img];
     },300);
+
+     //Current User
+     var currentUser = JSON.parse(localStorage.getItem("KYC"));
+    
+    document.querySelector("#current_user").textContent = currentUser[0].username;
+    document.querySelector("#current_user").style.textTransform = "uppercase";
 </script>
