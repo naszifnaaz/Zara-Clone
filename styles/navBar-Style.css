@@ -75,7 +75,3 @@ nav {
   border-bottom: 3px solid black;
   width: 8rem;
 }
-
-nav:hover {
-  background-color: white;
-}
