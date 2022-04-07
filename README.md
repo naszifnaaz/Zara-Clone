@@ -23,3 +23,9 @@ This project is a one to one clone of the online e-commerce website of "Zara" wh
 - Cascading Style Sheets
 - Vanilla JavaScript ES6
 - Local Storage
+
+## External Links
+
+[Netlify Deployed Link](https://zara-apparel-clone.netlify.app/)
+
+[Medium Blog Link](https://medium.com/@naszifnaaz/how-we-build-the-zara-website-clone-97501a407cda)
