@@ -1,5 +1,9 @@
 # Zara-Clone
 A clone of the online e-commerce website of Zara done during Masai Construct Week #1.
+![zara1](https://miro.medium.com/max/1400/1*j_y9odoHXeY58ZaBcQI6ig.jpeg)
+![zara2](https://miro.medium.com/max/1400/1*EGATegHn1EJ6PpkE8o_B7g.jpeg)
+![zara3](https://miro.medium.com/max/1400/1*NNSNQyYQHWpC6WmEoAHftA.jpeg)
+![zara4](https://miro.medium.com/max/1400/1*ASF-TPz0I02t87iHzEiY9g.jpeg)
 
 ## Abstract
 
